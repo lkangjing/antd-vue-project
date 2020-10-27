@@ -46,9 +46,9 @@ request.interceptors.request.use(config => {
   const token = storage.get(ACCESS_TOKEN)
   console.log(token)
   // 如果 token 存在
-  // 让每个请求携带自定义 token 请根据实际情况自行修改
+  // 让每个请求携带自定义 token 请根据实际情况自行修改token
   if (token) {
-    config.headers['Access-Token'] = token
+    config.headers['token'] = token
   }
   return config
 }, errorHandler)
